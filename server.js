@@ -1,9 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const ItemController = require('./controllers/ItemController');
-const ExcursionController = require('./controllers/ExcursionController');
-const UserController = require('./controllers/UserController');
+const BookController = require('./controllers/BookController');
 
 const app = express();
 
