@@ -3,13 +3,13 @@ const router = express.Router();
 const db = require("../models");
 
 // Find all excursions
-router.get("/api/excursions", (req, res) => {
-  db.Excursion.find({})
-    .then(excursionData => {
+router.get("/api/books", (req, res) => {
+  db.Book.find({})
+    .then(bookData => {
       res.json({
         error: false,
-        data: excursionData,
-        message: "Successfully retrieved all excursion data.",
+        data: bookData,
+        message: "Successfully retrieved all book data.",
       });
     })
     .catch(err => {
@@ -22,14 +22,13 @@ router.get("/api/excursions", (req, res) => {
 });
 
 // Find an excursion and populate existing items
-router.get("/api/excursions/:id", (req, res) => {
-  db.Excursion.findOne({ _id: req.params.id })
-    .populate("items")
-    .then(excursionData => {
+router.get("/api/books/:id", (req, res) => {
+  db.Book.findOne({ _id: req.params.id })
+    .then(bookData => {
       res.json({
         error: false,
-        data: excursionData,
-        message: "Successfully retrieved all excursion data.",
+        data: bookData,
+        message: "Successfully retrieved all book data.",
       });
     })
     .catch(err => {
@@ -59,5 +58,23 @@ router.post("/api/excursions", (req, res) => {
       });
     });
 });
+
+router.delete("/api/books/:id", (req, res) => {
+    db.Book.deleteOne({ _id: req.params.id }, req.body)
+      .then((bookData) => {
+        res.json({
+          error: false,
+          data: bookData,
+          message: "Successfully deleted book data.",
+        });
+      })
+      .catch((err) => {
+        res.status(500).json({
+          error: true,
+          data: null,
+          message: "Error deleting book data.",
+        });
+      });
+  });
 
 module.exports = router;
