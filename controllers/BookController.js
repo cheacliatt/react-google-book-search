@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const db = require("../models");
 
-// Find all excursions
+// Find all books
 router.get("/api/books", (req, res) => {
   db.Book.find({})
     .then(bookData => {
@@ -21,7 +21,7 @@ router.get("/api/books", (req, res) => {
     });
 });
 
-// Find an excursion and populate existing items
+// Find a specfic book
 router.get("/api/books/:id", (req, res) => {
   db.Book.findOne({ _id: req.params.id })
     .then(bookData => {
@@ -40,8 +40,8 @@ router.get("/api/books/:id", (req, res) => {
     });
 });
 
-// Create new excursion
-router.post("/api/excursions", (req, res) => {
+// Create new book
+router.post("/api/books", (req, res) => {
   db.Excursion.create(req.body)
     .then(newExcursionData => {
       res.json({
