@@ -14,16 +14,16 @@ class Results extends Component {
     );
   };
 
-//   handleSave = (id) => {
-//     API.saveBook(id)
-//       .then((response) => {
-//         this.setState({ savedBooks: this.state.savedBooks.concat([response]) });
-//         console.log("this is my saved book", this.state.savedBooks)
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   };
+  //   handleSave = (id) => {
+  //     API.saveBook(id)
+  //       .then((response) => {
+  //         this.setState({ savedBooks: this.state.savedBooks.concat([response]) });
+  //         console.log("this is my saved book", this.state.savedBooks)
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   };
 
   render() {
     console.log(this.state.books);
@@ -55,6 +55,15 @@ class Results extends Component {
               <div className="col-md-4">
                 {/* how to get thumbnails when they don't have them  */}
                 {/* <img src={book.volumeInfo.imageLinks.smallThumbnail || "https://f0.pngfuel.com/png/137/448/black-book-logo-png-clip-art-thumbnail.png"} class="card-img" alt={book.volumeInfo.title} width="10px" height="300px" /> */}
+                <img
+                  src={
+                    (book.volumeInfo.imageLinks &&
+                      book.volumeInfo.imageLinks.smallThumbnail) ||
+                    "https://www.placecage.com/300/200"
+                  }
+                  alt={book.volumeInfo.title}
+                  width="300"
+                />
               </div>
               <div className="col-md-8">
                 <div className="card-body">
