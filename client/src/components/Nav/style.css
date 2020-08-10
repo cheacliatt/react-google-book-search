@@ -1,0 +1,30 @@
+body {
+    background-color: rgb(26, 26, 26);
+}
+
+  /* Font of Navbar  */
+  .navbar-brand {
+    font-family: serif;
+    color: whitesmoke !important;
+    font-weight: 500;
+  }
+  
+  .nav-link {
+    color: white !important;
+  }
+  
+  .navbar-toggler {
+    background-color: rgba(184, 184, 184, 0) !important;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: rgba(245, 245, 245, 0) !important;
+  }
+
+  .custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .bg-light {
+    background-color: rgba(27, 27, 27, 0.432)!important;
+  }

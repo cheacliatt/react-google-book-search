@@ -34,7 +34,7 @@ class Results extends Component {
     return this.state.books.map((book) => {
       return (
         <div className="card">
-          <h5 className="card-header">{book.volumeInfo.title}</h5>
+          <h6 className="card-header">{book.volumeInfo.title}</h6>
           <img
             src={
               (book.volumeInfo.imageLinks &&
@@ -53,7 +53,7 @@ class Results extends Component {
               target="_blank"
               rel="noopener noreferrer"
             >
-              View Book
+              View Bookstore
             </a>
           </div>
         </div>
