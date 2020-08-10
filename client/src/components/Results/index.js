@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
+import "./style.css";
 
 class Results extends Component {
   state = {
@@ -41,7 +42,7 @@ class Results extends Component {
               "https://www.placecage.com/300/200"
             }
             alt={book.volumeInfo.title}
-            width="300"
+            width="150"
           />
           <div className="card-body">
             <h5 className="card-title">by: {book.volumeInfo.authors}</h5>
@@ -63,10 +64,10 @@ class Results extends Component {
   render() {
     console.log(this.state.books);
     return (
-      <div>
+      <div className="main">
         <input type="text" name="search" onChange={this.setBook} />
         <button onClick={this.handleSearchBook}>Search</button>
-        {this.state.books.length && this.generateBooks()}
+        {this.state.books.length && this.generateBooks() || this.state.books.length === 0}
       </div>
 
     );
