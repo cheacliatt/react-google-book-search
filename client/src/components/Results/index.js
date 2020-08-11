@@ -73,6 +73,7 @@ class Results extends Component {
               Save Book
             </button>
           </div>
+          <br></br>
         </div>
       );
     });

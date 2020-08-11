@@ -3,12 +3,12 @@
 import axios from "axios";
 
 export default {
-  // this gets the books from the query passed n
+  // This is the main Google Books API call
   getBook: function (query) {
     return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
   },
   //this returns the saved books in the database
-  savedBooks: function () {
+  getSavedBooks: function () {
     return axios.get("/api/books").then((result) => result.data);
   },
   //this saves a book to the database
