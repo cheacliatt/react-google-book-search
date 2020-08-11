@@ -1,10 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const path = require("path");
-const BookController = require('./controllers/BookController');
-
 const app = express();
-
+const BookController = require("./controllers/BookController")
 const PORT = process.env.PORT || 3001;
 
 app.use(express.urlencoded({ extended: true }));
@@ -15,17 +13,16 @@ if (process.env.NODE_ENV === "production") {
 };
 
 app.use(BookController);
-
 app.get("/api/config", (req, res) => {
   res.json({ success: true });
 });
 
-// app.get('*', (req, res) => {
-//     res.sendFile(path.join(__dirname, './client/build/index.html'));
-// });
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, './client/build/index.html'));
+});
 
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/react-google-book-search", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/gt-react-google-books", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

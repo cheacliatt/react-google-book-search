@@ -3,19 +3,19 @@
 import axios from "axios";
 
 export default {
-  //  Gets books from the query passed through the API call
+  // this gets the books from the query passed n
   getBook: function (query) {
     return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`);
   },
-  // Returns the saved books in the database
+  //this returns the saved books in the database
   savedBooks: function () {
     return axios.get("/api/books").then((result) => result.data);
   },
-  // Saves a book to the database
+  //this saves a book to the database
   saveBook: function (bookInfo) {
     return axios.post("/api/books", bookInfo).then((result) => result.data);
   },
-  //Deletes a book given a specific id
+  //deletes a book given a specific id
   deleteBook: function (id) {
     return axios.delete("/api/books/" + id).then((result) => result.data);
   },
