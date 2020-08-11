@@ -28,7 +28,7 @@ The primary usage of this code is to build a digital library of books.
 ## Links
 [GitHub Repository](https://github.com/cheacliatt/react-google-book-search "Repository")
 
-[Heroku Deployed](https://cac-google-books.herokuapp.com// "Heroku")
+[Heroku Deployed](https://cac-google-books.herokuapp.com/ "Heroku")
 
 
 ## License
