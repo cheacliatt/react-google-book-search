@@ -42,7 +42,7 @@ class SavedBooks extends Component {
               src={books.image}
               alt={books.title}
               width="150"
-              style={{ marginLeft: "auto", marginRight: "auto" }}
+              style={{ marginRight: "auto" }}
             />
             <div className="card-body">
               <h5 className="card-title">by: {books.authors}</h5>
@@ -53,7 +53,7 @@ class SavedBooks extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                View Book
+                View Bookstore
               </a>
               <button
                 type="button"

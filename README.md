@@ -15,6 +15,8 @@ An application designed to dynamically search through Google Books' collection.
 ## Description
 This application allows users to dynamically search through the Google Books database, and add their own saved books within a personal database.
 
+<img src="bookscreenshot.PNG"/>
+
 ## Installation
 
 This code can be forked and cloned onto one's local device through GitHub. Please make sure you are using the correction applications for administering this code onto your device, such as Terminal and Visual Studio Code. In order to edit the database, the user will need an understanding of MongoDB and an application to keep track of databases, like Robo 3T.
