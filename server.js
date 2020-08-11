@@ -13,6 +13,7 @@ if (process.env.NODE_ENV === "production") {
 };
 
 app.use(BookController);
+
 app.get("/api/config", (req, res) => {
   res.json({ success: true });
 });
