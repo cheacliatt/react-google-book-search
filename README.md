@@ -26,7 +26,9 @@ This code can be forked and cloned onto one's local device through GitHub. Pleas
 The primary usage of this code is to build a digital library of books.
 
 ## Links
-TBA
+[GitHub Repository](https://github.com/cheacliatt/react-google-book-search "Repository")
+
+[Heroku Deployed](https://cac-google-books.herokuapp.com// "Heroku")
 
 
 ## License
